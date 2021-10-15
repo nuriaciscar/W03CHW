@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: yellow;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: green;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.pokemons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
