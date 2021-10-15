@@ -19,5 +19,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "sass": "^1.43.2"
   }
 }
