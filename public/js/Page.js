@@ -1,5 +1,4 @@
 import Component from "./Component.js";
-import PokemonCard from "./PokemonCard.js";
 import PokemonService from "./PokemonService.js";
 
 class Page extends Component {
@@ -10,23 +9,23 @@ class Page extends Component {
     super(parentElement, "container2", "div");
     this.urlPokemon = urlPokemon;
 
-    this.generateHTML();
-
     (async () => {
       const getPokemon = new PokemonService(this.urlPokemon);
       const showPokemon = await getPokemon.getPokemons(this.urlPokemon);
       this.pokemonList = showPokemon.results;
-      // const containerPokemons = document.querySelector(".pokemons-list");
+      const containerPokemons = document.querySelector(".pokemons-list");
 
-      // this.pokemonList.map(
-      //   (character) =>
-      //     new PokemonCard(containerPokemons, "pokemon", "li", character.url)
-      // );
+      this.pokemonList.map(
+        (character) =>
+          new PokemonCard(containerPokemons, "pokemon", "li", character.url)
+      );
     })();
+
+    this.generateHTML();
   }
 
   generateHTML() {
-    this.element.innerHTML = `
+    const html = `
     <header class="header">
       <h1>
         <img
@@ -52,6 +51,8 @@ class Page extends Component {
       </section>
     </main>
     <footer class="footer"></footer>`;
+
+    this.element.innerHTML = html;
   }
 }
 
