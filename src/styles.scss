@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: green;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+// .all-cards {
+//   background-color: pink;
+// }
+
+.logo {
+  margin-left: 50px;
+}
+
+.pokemons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & li {
+    list-style: none;
+    margin: 30px;
+    width: 300px;
+    height: 250px;
+  }
+}
+
+.pokemon {
+  background-color: blue;
+  display: flex;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    width: 90%;
+    height: 500px;
+    flex-wrap: wrap;
+  }
+}

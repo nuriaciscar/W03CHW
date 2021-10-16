@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="100" height="100">
+	<title>favicon</title>
+	<defs>
+		<image  width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAOpQTFRFAAAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA9QAAsAAAnwAA6gAA/wAAPQICQUFBWFhYJAUFzQAA/wAAnwAAowAAeQAA+vr6/v7+d3d3SwAAogAAUFBQUlJSOzs7////kZGRJCQkUlJS////6urqHR0ds7Oz////////////zc3NbGxsYGBg////////////////////////////////////////////////////////////////////////////lFT3cAAAAE50Uk5TABxYdnphKwEXkOX+/++rMTTQVfORzQP/////RP//////gnX///////+SeP//////kmD///+JK+////9WAavkDzLm/FdV84g0zeMDRIKSho7G8gAAAKpJREFUeJxNj9cSgkAMRQN2XBUrNrCDDbCADRR75/9/RwIMcl723JuZzAYAoehINBZPgE8yxaQJIZlszstsnvgwBXceZEKKrFOUSIhyBSgGhavW6m7TABr3cU1eaLWx6EC359DnB6I0RBvBeOIwFURZUdFmMJcdFqqkLDU0HVZrfDfbnSaiGGDu5RAHC+B4+ufzBb96vQX5brrHPJ5efhmmf+7787Vt3bDQf/71HNQ8vOKHAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="7" y="7" />
+</svg>

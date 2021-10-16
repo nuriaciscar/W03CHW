@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --collect-coverage",
-    "sass": "sass src/styles.scss build/css/styles.css ",
-    "sass-dev": "sass --watch src/styles.scss build/css/styles.css "
+    "sass": "sass src/styles.scss public/css/styles.css ",
+    "sass-dev": "sass --watch src/styles.scss public/css/styles.css "
   },
   "babel": {
     "env": {
@@ -19,5 +19,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "sass": "^1.43.2"
   }
 }
