@@ -43,7 +43,37 @@ body {
 .pokemon {
   background-color: #fdeec0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 20px;
+}
+.pokemon__category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.pokemon__category__one {
+  background-color: #fe9801;
+  margin-right: 10px;
+  width: 90px;
+  height: 40px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.pokemon__category__two {
+  background-color: #ccda46;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .all {
