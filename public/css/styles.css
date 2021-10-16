@@ -24,13 +24,6 @@ body {
   left: 0;
 }
 
-li {
-  list-style: none;
-  margin: 30px;
-  width: 250px;
-  height: 250px;
-}
-
 .logo {
   margin-left: 50px;
 }
@@ -40,27 +33,32 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.pokemons-list li {
+  list-style: none;
+  margin: 30px;
+  width: 300px;
+  height: 250px;
+}
 
 .pokemon {
   background-color: blue;
   display: flex;
 }
 
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .all__cards {
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: pink;
-  width: 1000px;
+  width: 90%;
   height: 500px;
   flex-wrap: wrap;
-}
-
-.all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
