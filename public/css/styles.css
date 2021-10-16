@@ -3,7 +3,7 @@
 }
 
 body {
-  background: white;
+  background: #fcce52;
   width: auto;
   height: auto;
   padding: 0;
@@ -11,14 +11,14 @@ body {
 }
 
 .header {
-  background-color: green;
+  background-color: #003b3e;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   width: 100vw;
   position: fixed;
-  height: 70px;
+  height: 60px;
   top: 0;
   right: 0;
   left: 0;
@@ -41,8 +41,9 @@ body {
 }
 
 .pokemon {
-  background-color: blue;
+  background-color: #fdeec0;
   display: flex;
+  border-radius: 20px;
 }
 
 .all {
@@ -55,9 +56,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: pink;
+  background-color: #fcce52;
+  box-shadow: -13px -13px 20px #FFD768, 13px 13px 20px #eea542;
+  border-radius: 20px;
   width: 90%;
-  height: 500px;
+  height: 600px;
   flex-wrap: wrap;
 }
 
