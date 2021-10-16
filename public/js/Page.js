@@ -1,34 +1,32 @@
-import Component from "./Component";
-import PokemonCard from "./PokemonCard";
-import PokemonService from "./PokemonService";
+import Component from "./Component.js";
+import PokemonCard from "./PokemonCard.js";
+import PokemonService from "./PokemonService.js";
 
 class Page extends Component {
   urlPokemon;
   pokemonList;
 
-  constructor(parentElement, className, htmlTag, urlPokemon) {
-    super(parentElement, className, htmlTag);
+  constructor(parentElement, urlPokemon) {
+    super(parentElement, "container2", "div");
     this.urlPokemon = urlPokemon;
-    this.parentElement = parentElement;
-    this.element = document.createElement(htmlTag);
-    this.element.className = className;
 
     this.generateHTML();
-  
 
-  ( async() {
-    const getPokemon = new PokemonService(this.urlPokemon);
-    const showPokemon = await getPokemon.getPokemons(this.urlPokemon);
-    this.pokemonList= showPokemon.results;
+    (async () => {
+      const getPokemon = new PokemonService(this.urlPokemon);
+      const showPokemon = await getPokemon.getPokemons(this.urlPokemon);
+      this.pokemonList = showPokemon.results;
+      // const containerPokemons = document.querySelector(".pokemons-list");
 
-    this.pokemonList.map((character) => new PokemonCard (containerPokemons, "pokemon", "li", character.url));
-
+      // this.pokemonList.map(
+      //   (character) =>
+      //     new PokemonCard(containerPokemons, "pokemon", "li", character.url)
+      // );
     })();
   }
 
-  generateHTML(){
-    this.element.innerHTML=
-    `
+  generateHTML() {
+    this.element.innerHTML = `
     <header class="header">
       <h1>
         <img
@@ -54,11 +52,7 @@ class Page extends Component {
       </section>
     </main>
     <footer class="footer"></footer>`;
-    
-    const containerPokemons = document.querySelector(".pokemons-list");
-
   }
 }
-
 
 export default Page;

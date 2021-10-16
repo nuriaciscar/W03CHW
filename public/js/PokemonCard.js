@@ -1,19 +1,20 @@
-import PokemonService from "./PokemonService";
-import Component from "./Component";
+// import PokemonService from "./PokemonService.js";
+// import Component from "./Component.js";
 
-class PokemonCard extends Component {
-  name;
-  id;
-  type;
-  img;
-  url;
+// class PokemonCard extends Component {
+//   name;
+//   id;
+//   type;
+//   img;
+//   url;
+//   pokemon= {};
 
-  constructor(parentElement, className, htmlTag, url) {
-    super(parentElement, className, htmlTag);
-    this.element = document.createElement(htmlTag);
-    this.element.className = className;
-    this.url = url;
-  }
-}
+//   constructor(parentElement, className, htmlTag, url) {
+//     super(parentElement, className, htmlTag);
+//     this.element = document.createElement(htmlTag);
+//     this.element.className = className;
+//     this.url = url;
+//   }
+// }
 
-export default PokemonCard;
+// export default PokemonCard;
