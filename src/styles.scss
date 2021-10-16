@@ -3,7 +3,7 @@
 }
 
 body {
-  background: white;
+  background: rgb(252, 206, 82);
   width: auto;
   height: auto;
   padding: 0;
@@ -11,14 +11,14 @@ body {
 }
 
 .header {
-  background-color: green;
+  background-color: rgb(0, 59, 62);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   width: 100vw;
   position: fixed;
-  height: 70px;
+  height: 60px;
   top: 0;
   right: 0;
   left: 0;
@@ -35,19 +35,57 @@ body {
 .pokemons-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 
   & li {
     list-style: none;
-    margin: 30px;
-    width: 300px;
+    margin: 20px;
+    width: 200px;
     height: 250px;
   }
 }
 
 .pokemon {
-  background-color: blue;
+  background-color: rgb(253, 238, 192);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+
+  &__name {
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__category__one {
+    background-color: #fe9801;
+    margin-right: 7px;
+    width: 80px;
+    height: 35px;
+    border-radius: 9px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  &__category__two {
+    background-color: #ccda46;
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    border-radius: 9px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 
 .all {
@@ -56,13 +94,15 @@ body {
   align-items: center;
 
   &__cards {
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: pink;
+    background-color: rgb(252, 206, 82);
+    box-shadow: -13px -13px 20px#FFD768, 13px 13px 20px rgb(238, 165, 66);
+    border-radius: 20px;
     width: 90%;
-    height: 500px;
+    height: 650px;
     flex-wrap: wrap;
   }
 }
