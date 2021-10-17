@@ -23,6 +23,7 @@
       flex-direction: row;
       justify-content: flex-end;
       align-items: flex-end;
+      margin-left: 680px;
 
       &__page {
         font-family: "Anonymous Pro", monospace;
@@ -34,6 +35,15 @@
         align-items: flex-end;
         margin-left: 50px;
         cursor: pointer;
+        font-size: 18px;
+
+        &:first-of-type {
+          color: rgb(0, 99, 90);
+        }
+
+        & li :hover {
+          color: rgb(0, 99, 90);
+        }
       }
     }
   }

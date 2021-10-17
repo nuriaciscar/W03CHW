@@ -24,18 +24,21 @@ class PokemonCard extends Component {
     this.pokemon = onePokemon;
 
     this.id = onePokemon.id;
-    this.name = onePokemon.name;
+    this.name = onePokemon.name.toUpperCase();
     this.type1 = onePokemon.types[0].type.name;
 
     if (onePokemon.types[1]) {
       this.type2 = onePokemon.types[1].type.name;
     }
-    if (this.type2 === undefined) {
-      this.type2 = "";
-    }
 
     this.img = onePokemon.sprites.other.dream_world.front_default;
     this.createHTML();
+
+    if (this.type2 === undefined) {
+      this.element.querySelector(".pokemon__category__two").style.display =
+        "none";
+      this.type2 = "";
+    }
   }
 
   createHTML() {

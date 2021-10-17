@@ -1,17 +1,28 @@
 @import "https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 @mixin cards {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .pokemons-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    padding: 0;
+    margin-top: -20px;
 
     li {
       list-style: none;
       margin: 15px;
       width: 200px;
       height: 250px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
     }
   }
 
@@ -21,9 +32,8 @@
     align-items: center;
 
     &__cards {
-      margin-top: 10px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       background-color: #fcce52;
       box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #eea542;
@@ -32,45 +42,6 @@
       height: 650px;
       flex-wrap: wrap;
       font-family: "Anonymous Pro", monospace;
-    }
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    font-size: 35px;
-    text-align: center;
-    cursor: pointer;
-
-    &__next {
-      margin-left: 10px;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      background-color: #00776c;
-      color: black;
-      border: none;
-      cursor: pointer;
-    }
-    &__next :hover {
-      background-color: #ddd;
-      color: black;
-    }
-    &__back {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      background-color: #f7f7f7;
-      color: black;
-      border: none;
-      cursor: pointer;
-    }
-    &__back :hover {
-      background-color: #792585;
-      color: white;
     }
   }
 }

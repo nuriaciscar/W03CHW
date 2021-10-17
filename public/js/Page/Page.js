@@ -81,11 +81,12 @@ class Page extends Component {
         />
       </h1>
           <ul class="header__menu">
+          <li class="header__menu__page">All</li>
          <li class="header__menu__page">Mis pokemons</li>
         <li class="header__menu__page">Detalles</li>
       </ul>
     </header>
-    <main>
+    <main class= "main">
       <h2>All</h2>
       <section class="all__cards">
         <div class="buttons">

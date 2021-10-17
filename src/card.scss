@@ -10,6 +10,13 @@
     border-radius: 20px;
     box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #f8b85d;
 
+    & img {
+      &:hover {
+        width: 130px;
+        height: 130px;
+      }
+    }
+
     p {
       margin-top: 35px;
     }
