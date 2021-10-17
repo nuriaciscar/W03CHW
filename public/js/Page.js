@@ -31,25 +31,28 @@ class Page extends Component {
 
   generateHTML() {
     const html = `
-    <header class="header">
-      <h1>
+       <header class="header">
+      <h1 class="header__logo">
         <img
-          class="logo"
+          class="header__logo"
           src="./img/logo.png"
           alt="Pokemons"
           width="120px"
           alt="120px"
         />
       </h1>
-      <ul>
-        <li>Mis pokemons</li>
-        <li>Detalles</li>
+          <ul class="header__menu">
+         <li class="header__menu__page">Mis pokemons</li>
+        <li class="header__menu__page">Detalles</li>
       </ul>
     </header>
     <main>
       <h2>All</h2>
-      <section class="all">
-        <div class="all__cards">
+      <section class="all__cards">
+        <div class="buttons">
+        <button href="#" class="buttons__back"><</button>
+            <button href="#" class="buttons__next">></button>
+          </div>
           <ul class="pokemons-list">
           </ul>
         </div>
