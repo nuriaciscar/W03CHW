@@ -1,5 +1,6 @@
 import Component from "./Component.js";
 import PokemonService from "./PokemonService.js";
+import PokemonCard from "./PokemonCard.js";
 
 class Page extends Component {
   urlPokemon;
@@ -17,35 +18,39 @@ class Page extends Component {
       const getPokemon = new PokemonService(this.urlPokemon);
       const showPokemon = await getPokemon.getPokemons(this.urlPokemon);
       this.pokemonList = showPokemon.results;
+      const containerPokemons = document.querySelector(".pokemons-list");
 
-      //   this.pokemonList.map(
-      //     (character) =>
-      //       new PokemonCard(containerPokemons, "pokemon", "li", character.url)
-      //   );
+      this.pokemonList.map(
+        (character) =>
+          new PokemonCard(containerPokemons, "pokemon", "li", character.url)
+      );
     })();
   }
 
   generateHTML() {
-    this.element.innerHTML = `
-    <header class="header">
-      <h1>
+    const html = `
+       <header class="header">
+      <h1 class="header__logo">
         <img
-          class="logo"
+          class="header__logo"
           src="./img/logo.png"
           alt="Pokemons"
           width="120px"
           alt="120px"
         />
       </h1>
-      <ul>
-        <li>Mis pokemons</li>
-        <li>Detalles</li>
+          <ul class="header__menu">
+         <li class="header__menu__page">Mis pokemons</li>
+        <li class="header__menu__page">Detalles</li>
       </ul>
     </header>
     <main>
       <h2>All</h2>
-      <section class="all">
-        <div class="all__cards">
+      <section class="all__cards">
+        <div class="buttons">
+        <button href="#" class="buttons__back"><</button>
+            <button href="#" class="buttons__next">></button>
+          </div>
           <ul class="pokemons-list">
           </ul>
         </div>
@@ -53,7 +58,7 @@ class Page extends Component {
     </main>
     <footer class="footer"></footer>`;
 
-    const containerPokemons = document.querySelector(".pokemons-list");
+    this.element.innerHTML = html;
   }
 }
 

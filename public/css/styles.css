@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Anonymous Pro", monospace;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
 .header {
   background-color: #003b3e;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   width: 100vw;
@@ -22,6 +22,30 @@ body {
   top: 0;
   right: 0;
   left: 0;
+}
+
+.header__logo {
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.header__menu__page {
+  font-family: "Anonymous Pro", monospace;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 50px;
+  cursor: pointer;
 }
 
 .logo {
@@ -35,9 +59,10 @@ body {
   flex-direction: row;
   align-items: center;
 }
+
 .pokemons-list li {
   list-style: none;
-  margin: 20px;
+  margin: 15px;
   width: 200px;
   height: 250px;
 }
@@ -49,7 +74,17 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
+  box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #f8b85d;
 }
+
+.pokemon p {
+  margin-top: 35px;
+}
+
+.pokemon__name {
+  margin: 15px;
+}
+
 .pokemon__category {
   display: flex;
   flex-direction: row;
@@ -57,6 +92,7 @@ body {
   align-items: center;
   margin-bottom: 40px;
 }
+
 .pokemon__category__one {
   background-color: #fe9801;
   margin-right: 7px;
@@ -67,6 +103,7 @@ body {
   align-items: center;
   display: flex;
 }
+
 .pokemon__category__two {
   background-color: #ccda46;
   width: 80px;
@@ -83,17 +120,60 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .all__cards {
-  margin-top: 25px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #fcce52;
-  box-shadow: -13px -13px 20px #FFD768, 13px 13px 20px #eea542;
+  box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #eea542;
   border-radius: 20px;
   width: 90%;
   height: 650px;
   flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.buttons__next {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #00776c;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons__next :hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.buttons__back {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #f7f7f7;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons__back :hover {
+  background-color: #792585;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

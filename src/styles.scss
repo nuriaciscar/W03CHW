@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: "Anonymous Pro", monospace;
 }
 
 body {
-  background: rgb(252, 206, 82);
+  background: #fcce52;
   width: auto;
   height: auto;
   padding: 0;
@@ -11,9 +12,8 @@ body {
 }
 
 .header {
-  background-color: rgb(0, 59, 62);
+  background-color: #003b3e;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   width: 100vw;
@@ -23,10 +23,27 @@ body {
   right: 0;
   left: 0;
 }
-
-// .all-cards {
-//   background-color: pink;
-// }
+.header__logo {
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.header__menu__page {
+  font-family: "Anonymous Pro", monospace;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 50px;
+  cursor: pointer;
+}
 
 .logo {
   margin-left: 50px;
@@ -38,71 +55,109 @@ body {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-
-  & li {
-    list-style: none;
-    margin: 20px;
-    width: 200px;
-    height: 250px;
-  }
+}
+.pokemons-list li {
+  list-style: none;
+  margin: 15px;
+  width: 200px;
+  height: 250px;
 }
 
 .pokemon {
-  background-color: rgb(253, 238, 192);
+  background-color: #fdeec0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
-
-  &__name {
-  }
-
-  &__category {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  &__category__one {
-    background-color: #fe9801;
-    margin-right: 7px;
-    width: 80px;
-    height: 35px;
-    border-radius: 9px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  &__category__two {
-    background-color: #ccda46;
-    width: 80px;
-    height: 35px;
-    border-radius: 10px;
-    border-radius: 9px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
+  box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #f8b85d;
+}
+.pokemon p {
+  margin-top: 35px;
+}
+.pokemon__name {
+  margin: 15px;
+}
+.pokemon__category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.pokemon__category__one {
+  background-color: #fe9801;
+  margin-right: 7px;
+  width: 80px;
+  height: 35px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.pokemon__category__two {
+  background-color: #ccda46;
+  width: 80px;
+  height: 35px;
+  border-radius: 10px;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .all {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.all__cards {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fcce52;
+  box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #eea542;
+  border-radius: 20px;
+  width: 90%;
+  height: 650px;
+  flex-wrap: wrap;
+}
 
-  &__cards {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(252, 206, 82);
-    box-shadow: -13px -13px 20px#FFD768, 13px 13px 20px rgb(238, 165, 66);
-    border-radius: 20px;
-    width: 90%;
-    height: 650px;
-    flex-wrap: wrap;
-  }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+.buttons__next {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #00776c;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.buttons__next :hover {
+  background-color: #ddd;
+  color: black;
+}
+.buttons__back {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #f7f7f7;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.buttons__back :hover {
+  background-color: #792585;
+  color: white;
 }
