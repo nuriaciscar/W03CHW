@@ -1,8 +1,8 @@
-import Component from "./Component.js";
-import Page from "./Page.js";
-import PokemonCard from "./PokemonCard.js";
 
-const container = document.querySelector(".container");
+import Page from "./Page.js";
+
+const container = document.querySelector(".app");
+
 
 const web = new Page(
   container,
