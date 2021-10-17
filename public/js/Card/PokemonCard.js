@@ -1,5 +1,5 @@
-import PokemonService from "./PokemonService.js";
-import Component from "./Component.js";
+import PokemonService from "../Service/PokemonService.js";
+import Component from "../Component/Component.js";
 
 class PokemonCard extends Component {
   name;

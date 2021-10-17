@@ -1,10 +1,12 @@
-import Component from "./Component.js";
-import PokemonService from "./PokemonService.js";
-import PokemonCard from "./PokemonCard.js";
+import Component from "../Component/Component.js";
+import PokemonService from "../Service/PokemonService.js";
+import PokemonCard from "../Card/PokemonCard.js";
+import Button from "../Button/Button.js";
 
 class Page extends Component {
   urlPokemon;
   pokemonList;
+  count = 0;
 
   constructor(parentElement, urlPokemon) {
     super(parentElement, "container", "div");
@@ -13,18 +15,57 @@ class Page extends Component {
     this.parentElement.append(this.element);
 
     this.generateHTML();
+    this.createButtons();
+    this.updatePokemons();
+  }
 
+  updatePokemons() {
     (async () => {
       const getPokemon = new PokemonService(this.urlPokemon);
       const showPokemon = await getPokemon.getPokemons(this.urlPokemon);
       this.pokemonList = showPokemon.results;
       const containerPokemons = document.querySelector(".pokemons-list");
 
+      containerPokemons.innerHTML = "";
       this.pokemonList.map(
         (character) =>
           new PokemonCard(containerPokemons, "pokemon", "li", character.url)
       );
     })();
+  }
+
+  createButtons() {
+    const buttonsContainer = document.querySelector(".buttons");
+
+    const buttonPrevious = new Button(
+      buttonsContainer,
+      "button__back",
+      "button",
+      "<",
+      () => {
+        if (this.count === 0) {
+          return;
+        } else {
+          this.count -= 10;
+          this.urlPokemon = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${this.count}`;
+
+          this.updatePokemons();
+        }
+      }
+    );
+
+    const buttonNext = new Button(
+      buttonsContainer,
+      "button__next",
+      "button",
+      ">",
+      () => {
+        this.count += 10;
+        this.urlPokemon = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${this.count}`;
+
+        this.updatePokemons();
+      }
+    );
   }
 
   generateHTML() {
@@ -48,8 +89,6 @@ class Page extends Component {
       <h2>All</h2>
       <section class="all__cards">
         <div class="buttons">
-        <button href="#" class="buttons__back"><</button>
-            <button href="#" class="buttons__next">></button>
           </div>
           <ul class="pokemons-list">
           </ul>

@@ -6,9 +6,10 @@ class Button extends Component {
 
   constructor(parentElement, className, htmlTag, text, actionClick) {
     super(parentElement, className, "button");
-    this.actionOnClick = actionOnClick;
+    this.actionClick = actionClick;
     this.text = text;
-    this.element.innerHTML = text;
+    this.element.innerHTML = this.text;
+    this.parentElement.append(this.element);
 
     this.action();
   }
