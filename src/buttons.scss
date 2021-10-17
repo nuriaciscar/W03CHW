@@ -6,37 +6,48 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    font-size: 35px;
+    padding-top: 10px;
     text-align: center;
     cursor: pointer;
-  }
 
-  .buttons__next {
-    margin-left: 10px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #00776c;
-    color: black;
-    border: none;
-    cursor: pointer;
-    :hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .buttons__back {
-      border-radius: 50%;
-      width: 40px;
+    .button__next {
+      transition: all 0.5s ease;
+      margin-left: 10px;
+      border-radius: 20px;
+      width: 60px;
       height: 40px;
-      background-color: #f7f7f7;
-      color: black;
-      border: none;
+      line-height: 1;
+      background-color: transparent;
+      border: 2px solid white;
+      outline: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 400;
+
       cursor: pointer;
-      :hover {
-        background-color: #792585;
-        color: white;
+      &:hover {
+        color: rgb(247, 69, 28);
+        background-color: #fff;
+      }
+    }
+    .button__back {
+      transition: all 0.5s ease;
+      margin-left: 10px;
+      border-radius: 20px;
+      width: 60px;
+      height: 40px;
+      line-height: 1;
+      background-color: transparent;
+      border: 2px solid white;
+      outline: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+
+      cursor: pointer;
+      &:hover {
+        color: rgb(247, 69, 28);
+        background-color: #fff;
       }
     }
   }
