@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+
 @mixin card {
   .pokemon {
     background-color: #fdeec0;
@@ -7,6 +9,13 @@
     flex-direction: column;
     border-radius: 20px;
     box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #f8b85d;
+
+    & img {
+      &:hover {
+        width: 130px;
+        height: 130px;
+      }
+    }
 
     p {
       margin-top: 35px;

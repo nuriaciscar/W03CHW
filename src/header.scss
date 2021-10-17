@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 
 @mixin header {
-  header {
+  .header {
     background-color: #003b3e;
     display: flex;
     align-items: center;
@@ -23,6 +23,7 @@
       flex-direction: row;
       justify-content: flex-end;
       align-items: flex-end;
+      margin-left: 680px;
 
       &__page {
         font-family: "Anonymous Pro", monospace;
@@ -34,6 +35,15 @@
         align-items: flex-end;
         margin-left: 50px;
         cursor: pointer;
+        font-size: 18px;
+
+        &:first-of-type {
+          color: rgb(0, 99, 90);
+        }
+
+        & li :hover {
+          color: rgb(0, 99, 90);
+        }
       }
     }
   }
