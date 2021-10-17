@@ -6,7 +6,7 @@ class PokemonCard extends Component {
   id;
   type;
   img;
-  urlAPI;
+  url;
   pokemon = {};
 
   constructor(parentElement, className, htmlTag, url) {
@@ -18,18 +18,17 @@ class PokemonCard extends Component {
   }
 
   async getData() {
-    const getAPokemon = new PokemonService(this.urlAPI);
-    const onePokemon = await getAPokemon.getPokemons(this.urlAPI);
+    const getAPokemon = new PokemonService(this.url);
+    const onePokemon = await getAPokemon.getPokemons(this.url);
     this.pokemon = onePokemon;
 
     this.id = onePokemon.id;
     this.name = onePokemon.name;
     this.type = onePokemon.types[0].type.name;
-    this.pokemon = onePokemon;
+
     this.img = onePokemon.sprites.other.dream_world.front_default;
 
     this.createHTML();
-    this.paintCard();
   }
 
   createHTML() {
@@ -49,10 +48,7 @@ class PokemonCard extends Component {
               </div>`;
 
     this.element.innerHTML = html;
-  }
-
-  paintCard() {
-    this.element.classList.add(this.type);
+    this.parentElement.append(this.element);
   }
 }
 
