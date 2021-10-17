@@ -82,8 +82,8 @@ class Page extends Component {
       </h1>
           <ul class="header__menu">
           <li class="header__menu__page">All</li>
-         <li class="header__menu__page">Mis pokemons</li>
-        <li class="header__menu__page">Detalles</li>
+         <li class="header__menu__page">My pokemons</li>
+        <li class="header__menu__page">Details</li>
       </ul>
     </header>
     <main class= "main">
