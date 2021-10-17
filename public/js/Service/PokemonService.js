@@ -2,10 +2,10 @@ class PokemonService {
   urlAPI = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
   constructor(urlApi) {
-    this.urlAPI = urlApi;
+    this.urlApi = urlApi;
   }
   async getPokemons() {
-    const response = await fetch(this.urlAPI);
+    const response = await fetch(this.urlApi);
     const pokemons = await response.json();
     return pokemons;
   }

@@ -1,16 +1,21 @@
 import Component from "../Component/Component.js";
 
 class Button extends Component {
-  actionOnClick;
-  constructor(parentElement, className, htmlTag, actionOnClick) {
+  actionClick;
+  text;
+
+  constructor(parentElement, className, htmlTag, text, actionClick) {
     super(parentElement, className, "button");
-    this.actionOnClick = actionOnClick;
+    this.actionClick = actionClick;
+    this.text = text;
+    this.element.innerHTML = this.text;
+    this.parentElement.append(this.element);
 
     this.action();
   }
 
   action() {
-    this.element.addEventListener("click", this.actionOnClick);
+    this.element.addEventListener("click", this.actionClick);
   }
 }
 

@@ -16,24 +16,24 @@
     &__logo {
       justify-content: flex-start;
       margin-left: 30px;
+    }
 
-      &__menu {
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      &__page {
+        font-family: "Anonymous Pro", monospace;
+        color: white;
+        list-style: none;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
-
-        &__menu__page {
-          font-family: "Anonymous Pro", monospace;
-          color: white;
-          list-style: none;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: flex-end;
-          margin-left: 50px;
-          cursor: pointer;
-        }
+        margin-left: 50px;
+        cursor: pointer;
       }
     }
   }

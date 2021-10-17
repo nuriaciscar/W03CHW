@@ -20,26 +20,27 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 40px;
-    }
-    &__category__one {
-      background-color: #fe9801;
-      margin-right: 7px;
-      width: 80px;
-      height: 35px;
-      border-radius: 9px;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-    }
-    &__category__two {
-      background-color: #ccda46;
-      width: 80px;
-      height: 35px;
-      border-radius: 10px;
-      border-radius: 9px;
-      justify-content: center;
-      align-items: center;
-      display: flex;
+
+      &__one {
+        background-color: #fe9801;
+        margin-right: 7px;
+        width: 80px;
+        height: 35px;
+        border-radius: 9px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      &__two {
+        background-color: #ccda46;
+        width: 80px;
+        height: 35px;
+        border-radius: 10px;
+        border-radius: 9px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
     }
   }
 }
