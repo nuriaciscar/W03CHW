@@ -1,6 +1,8 @@
+
 import Page from "./Page.js";
 
 const container = document.querySelector(".app");
+
 
 const web = new Page(
   container,
