@@ -2,8 +2,8 @@ import Component from "../Component/Component.js";
 
 class Button extends Component {
   actionOnClick;
-  constructor(parentElement, actionOnClick) {
-    super(parentElement, clasName, htmlTag);
+  constructor(parentElement, className, htmlTag, actionOnClick) {
+    super(parentElement, className, "button");
     this.actionOnClick = actionOnClick;
 
     this.action();

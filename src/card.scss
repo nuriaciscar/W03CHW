@@ -1,0 +1,45 @@
+@mixin card {
+  .pokemon {
+    background-color: #fdeec0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: -13px -13px 20px #ffd768, 13px 13px 20px #f8b85d;
+
+    p {
+      margin-top: 35px;
+    }
+    &__name {
+      margin: 15px;
+    }
+    &__category {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    &__category__one {
+      background-color: #fe9801;
+      margin-right: 7px;
+      width: 80px;
+      height: 35px;
+      border-radius: 9px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    &__category__two {
+      background-color: #ccda46;
+      width: 80px;
+      height: 35px;
+      border-radius: 10px;
+      border-radius: 9px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
