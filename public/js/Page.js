@@ -25,8 +25,6 @@ class Page extends Component {
           new PokemonCard(containerPokemons, "pokemon", "li", character.url)
       );
     })();
-
-    this.generateHTML();
   }
 
   generateHTML() {

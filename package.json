@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watchAll --collect-coverage",
     "sass": "sass src/styles.scss public/css/styles.css ",
-    "sass-dev": "sass --watch src/styles.scss public/css/styles.css "
+    "sass-dev": "sass --watchAll src/styles.scss public/css/styles.css "
   },
   "babel": {
     "env": {
